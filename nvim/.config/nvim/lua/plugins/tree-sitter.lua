@@ -29,6 +29,8 @@ return {
       "c",
       "c_sharp",
       "diff",
+      "gitcommit",
+      "git_rebase",
       "html",
       "javascript",
       "jsdoc",
