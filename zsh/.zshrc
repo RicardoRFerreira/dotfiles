@@ -10,6 +10,9 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Set Vi Mode
+bindkey -v
+
 eval "$(starship init zsh)"
 
 alias ls="eza --icons=auto"
