@@ -16,7 +16,7 @@ bindkey -v
 eval "$(starship init zsh)"
 
 alias ls="eza --icons=auto"
-alias tree="eza -T --icons=auto"
+alias tree="eza -T -L 1 --icons=auto"
 
 # Syntax Highlighting
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
