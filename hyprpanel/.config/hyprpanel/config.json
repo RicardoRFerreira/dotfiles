@@ -514,5 +514,13 @@
   "theme.font.name": "Terminess Nerd Font Propo",
   "theme.font.style": "normal",
   "theme.font.label": "Terminess Nerd Font Propo Medium",
-  "theme.bar.buttons.workspaces.smartHighlight": true
+  "theme.bar.buttons.workspaces.smartHighlight": true,
+  "bar.workspaces.workspaceIconMap": {
+    "1": "",
+    "2": "",
+    "3": "",
+    "4": "",
+    "5": ""
+  },
+  "bar.workspaces.workspaces": 3
 }
