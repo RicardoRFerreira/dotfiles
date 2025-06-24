@@ -522,5 +522,6 @@
     "4": "",
     "5": ""
   },
-  "bar.workspaces.workspaces": 3
+  "bar.workspaces.workspaces": 3,
+  "theme.matugen": false
 }
