@@ -210,7 +210,6 @@ return {
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
         'stylua', -- Used to format Lua code
-        'terraform', -- Linter, formatter and runtime
         'prettier', -- Json, HTML, Javascript formatter
         'sonarlint-language-server'
       })
