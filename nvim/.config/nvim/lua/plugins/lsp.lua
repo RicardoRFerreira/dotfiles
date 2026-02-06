@@ -178,6 +178,20 @@ return {
         terraformls = {},
         docker_compose_language_service = {},
         dockerls = {},
+        roslyn = {
+          on_attach = function()
+            -- print("This will run when the server attaches!")
+          end,
+          settings = {
+            ["csharp|inlay_hints"] = {
+              csharp_enable_inlay_hints_for_implicit_object_creation = true,
+              csharp_enable_inlay_hints_for_implicit_variable_types = true,
+            },
+            ["csharp|code_lens"] = {
+              dotnet_enable_references_code_lens = true,
+            },
+          },
+        },
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
@@ -214,6 +228,13 @@ return {
         'sonarlint-language-server'
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
+
+      require('mason').setup {
+        registries = {
+          "github:mason-org/mason-registry",
+          "github:Crashdummyy/mason-registry",
+        },
+      }
 
       require('mason-lspconfig').setup {
         ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
