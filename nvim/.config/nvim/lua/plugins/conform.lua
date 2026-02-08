@@ -9,7 +9,7 @@ return {
             terraform = { lsp_format = "fallback" },
             -- Conform will run the first available formatter
             javascript = { "prettierd", "prettier", stop_after_first = true },
-            csharp = { "csharpier" },
+            cs = { "csharpier" },
         },
         -- Set this to change the default values when calling conform.format()
         -- This will also affect the default values for format_on_save/format_after_save
