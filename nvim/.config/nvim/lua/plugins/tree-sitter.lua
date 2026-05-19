@@ -3,6 +3,9 @@ return {
   lazy = false,
   build = ":TSUpdate",
   branch = "main",
+  init = function ()
+    vim.env.CC = "gcc" -- set the C compiler to gcc, so it works correctly on Windows
+  end,
   -- [[ Configure Treesitter ]] See `:help nvim-treesitter-intro`
   config = function()
       -- ensure basic parser are installed
