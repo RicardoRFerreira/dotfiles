@@ -1,6 +1,6 @@
 -- Set programs that you use
 local terminal    = "ghostty"
-local fileManager = "dolphin"
+local fileManager = "nemo"
 local menu        = "rofi -show combi -modes combi -combi-modes \"window,drun,run\" -show-icons"
 
 local mainMod = "SUPER" -- Sets "Windows" key as main modifier
