@@ -42,7 +42,8 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-font-family = Terminess Nerd Font Propo
-font-size = 14
+# font-family = Terminess Nerd Font Propo
+font-family = JetBrainsMonoNL Nerd Font Mono
+font-size = 12
 
 background-opacity = 0.9
