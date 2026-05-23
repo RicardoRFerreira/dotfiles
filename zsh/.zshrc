@@ -27,3 +27,6 @@ source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Atuin
 . "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)"
+
+# Zoxide
+eval "$(zoxide init zsh)"
