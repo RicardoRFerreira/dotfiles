@@ -163,7 +163,8 @@ local servers = {
   rust_analyzer = {
     settings = {
       ['rust-analyzer'] = {
-        checkOnSave = {
+        checkOnSave = true,
+        check = {
           command = 'clippy',
         },
         cargo = {
