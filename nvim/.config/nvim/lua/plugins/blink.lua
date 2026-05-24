@@ -3,7 +3,6 @@ return {
   -- optional: provides snippets for the snippet source
   dependencies = {
     'rafamadriz/friendly-snippets',
-    'Kaiser-Yang/blink-cmp-avante',
   },
 
   -- use a release tag to download pre-built binaries
@@ -43,16 +42,8 @@ return {
     -- Default list of enabled providers defined so that you can extend it
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
-      default = { 'lsp', 'path', 'snippets', 'avante', },
-      providers = {
-        avante = {
-          module = 'blink-cmp-avante',
-          name = 'Avante',
-          opts = {
-            -- options for blink-cmp-avante
-          }
-        }
-      },
+      default = { 'lsp', 'path', 'snippets', },
+      providers = {},
     },
 
     -- (Default) Rust fuzzy matcher for typo resistance and significantly better performance
