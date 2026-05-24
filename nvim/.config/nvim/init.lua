@@ -4,12 +4,12 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- set the C compiler to gcc. Required for nvim-treesitter so it works correctly on Windows
+vim.env.CC = "gcc"
+
 require("vim._core.ui2").enable({})
 
-require("config.lazy")
 require("config.keymaps")
-
-vim.cmd.colorscheme "catppuccin"
 
 -- Set to true if you have a Nerd Font installed and selected in the terminal
 vim.g.have_nerd_font = true
@@ -75,6 +75,30 @@ vim.o.scrolloff = 10
 -- instead raise a dialog asking if you wish to save the current file(s)
 -- See `:help 'confirm'`
 vim.o.confirm = true
+
+-- Diagnostic Config & Keymaps
+--  See `:help vim.diagnostic.Opts`
+vim.diagnostic.config {
+  update_in_insert = false,
+  severity_sort = true,
+  float = { border = 'rounded', source = 'if_many' },
+  underline = { severity = { min = vim.diagnostic.severity.WARN } },
+
+  -- Can switch between these as you prefer
+  virtual_text = false, -- Text shows up at the end of the line
+  virtual_lines = true, -- Text shows up underneath the line, with virtual lines
+
+  -- Auto open the float, so you can easily read the errors when jumping with `[d` and `]d`
+  jump = {
+    on_jump = function(_, bufnr)
+      vim.diagnostic.open_float {
+        bufnr = bufnr,
+        scope = 'cursor',
+        focus = false,
+      }
+    end,
+  },
+}
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
