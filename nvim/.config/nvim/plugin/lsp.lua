@@ -173,6 +173,7 @@ local servers = {
       },
     },
   },
+  tsgo = {},
 }
 
 vim.pack.add {
@@ -202,7 +203,8 @@ vim.list_extend(ensure_installed, {
   -- You can add other tools here that you want Mason to install
   'stylua', -- Used to format Lua code
   'prettier', -- Json, HTML, Javascript formatter
-  'sonarlint-language-server'
+  'sonarlint-language-server',
+  'tsgo', -- TypeScript LSP
 })
 
 require('mason-tool-installer').setup { ensure_installed = ensure_installed }
