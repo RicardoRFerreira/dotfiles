@@ -30,10 +30,13 @@ hl.bind(mainMod .. " + K",     hl.dsp.focus({ direction = "up" }))
 hl.bind(mainMod .. " + L",     hl.dsp.focus({ direction = "right" }))
 
 -- Move windows with secondaryMod + [HJKL]
-hl.bind(secondaryMod .. " + H",     hl.dsp.window.move({ direction = "left" }))
-hl.bind(secondaryMod .. " + J",     hl.dsp.window.move({ direction = "down" }))
-hl.bind(secondaryMod .. " + K",     hl.dsp.window.move({ direction = "up" }))
-hl.bind(secondaryMod .. " + L",     hl.dsp.window.move({ direction = "right" }))
+-- hl.bind(secondaryMod .. " + H",     hl.dsp.window.move({ direction = "left" }))
+-- hl.bind(secondaryMod .. " + J",     hl.dsp.window.move({ direction = "down" }))
+-- hl.bind(secondaryMod .. " + K",     hl.dsp.window.move({ direction = "up" }))
+-- hl.bind(secondaryMod .. " + L",     hl.dsp.window.move({ direction = "right" }))
+
+hl.bind(secondaryMod .. " + H",     function () hl.dispatch(hl.dsp.workspace.move({ monitor = "-1" })) end)
+hl.bind(secondaryMod .. " + L",     function () hl.dispatch(hl.dsp.workspace.move({ monitor = "+1" })) end)
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
