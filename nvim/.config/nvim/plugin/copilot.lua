@@ -2,7 +2,7 @@ vim.pack.add({ "https://github.com/zbirenbaum/copilot.lua" })
 
 require("copilot").setup({
     suggestion = {
-        enabled = true,
+        enabled = false,
         auto_trigger = true,
         accept = false,
     },
