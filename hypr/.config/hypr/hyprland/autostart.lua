@@ -4,6 +4,6 @@
 -- Or execute your favorite apps at launch like this:
 --
 hl.on("hyprland.start", function ()
-  hl.exec_cmd("hyprpanel & hypridle")
+  hl.exec_cmd("waybar & hypridle")
   -- hl.exec_cmd("kmonad ~/config.kbd")
 end)
