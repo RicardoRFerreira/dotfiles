@@ -1,7 +1,7 @@
 hl.config({
     input = {
-        kb_layout  = "us, us",
-        kb_variant = ", intl",
+        kb_layout  = "us, us, pt",
+        kb_variant = ", intl, ",
         kb_model   = "",
         kb_options = "grp:win_space_toggle",
         kb_rules   = "",
