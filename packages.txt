@@ -19,6 +19,7 @@ hyprshutdown
 hyprsunset
 kitty
 man-db
+matugen
 neovim
 nemo
 nwg-look
