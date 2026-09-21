@@ -5,7 +5,8 @@
   "include": [
     "./modules/distro.jsonc",
     "./modules/connections.jsonc",
-    "./modules/system.jsonc"
+    "./modules/system.jsonc",
+    "./modules/audio.jsonc"
   ],
   "modules-left": [
     "custom/distro",
@@ -17,7 +18,7 @@
   "modules-right": [
     "tray",
     "group/connections",
-    "pulseaudio#source",
+    "group/audio",
     "battery",
     "group/system",
     "clock"
@@ -60,22 +61,6 @@
     "spacing": 0
   },
 
-  "pulseaudio#source": {
-    "format": "{icon} {volume}%",
-    "format-muted": "󰝟",
-    "tooltip": true,
-    "tooltip-format": "Volume: {volume}%",
-    "format-icons": {
-      "headphone": "",
-      "default": [
-        "",
-        "",
-        ""
-      ],
-    },
-    "scroll-step": 5,
-    "on-click": "pavucontrol"
-  },
   "battery": {
     "interval": 60,
     "states": {
@@ -95,8 +80,8 @@
   },
 
   "clock": {
-    "format": "{:%H:%M}",
-    "format-alt": "{:%A, %B %d, %Y (%R)} 󰃰 ",
+    "format": "{:%Y/%m/%d %H:%M} 󰃰",
+    "format-alt": "{:%A, %B %d, %Y (%R)} 󰃰",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "mode"             : "year",

@@ -1,6 +1,4 @@
-/* Catppuccin Mocha — waybar style
-* Clean, minimal, consistent module pills
-*/
+@import "colors.css";
 
 @define-color base                  #1e1e2e;
 @define-color mantle                #181825;
@@ -23,21 +21,19 @@
 @define-color peach                 #fab387;
 @define-color red                   #f38ba8;
 
-@define-color inactive-workspace    rgba(137, 180, 250, 0.65);
-
 * {
   all: unset;
   font-family: "JetBrainsMono Nerd Font Propo";
   font-size: 15px;
 }
 
-
 #custom-distro {
   padding: 0 15px 0 10px;
 }
 
 window#waybar {
-  background-color: @base;
+  /* background-color: @base; */
+  background-color: transparent;
 }
 
 tooltip {
@@ -69,19 +65,27 @@ menu menuitem:hover {
   color: @subtext0;
 }
 
-/* ---------- shared module pill ---------- */
+/* ---------- groups ---------- */
 
 #workspaces,
-#clock,
-#pulseaudio,
-#battery,
-#network,
-#cpu,
-#memory,
-#tray {
-  color: @text;
+#connections,
+#system,
+#audio {
+  background-color: @surface_container;
+  color: @on_surface;
   padding: 4px 12px;
-  margin: 4px 3px;
+  margin: 4px 17px;
+  border-radius: 10px;
+}
+
+/* ---------- shared module pill ---------- */
+
+#clock,
+#battery {
+  background-color: @surface_container;
+  color: @on_surface;
+  padding: 4px 12px;
+  margin: 4px 17px;
   border-radius: 10px;
 }
 
@@ -108,7 +112,9 @@ menu menuitem:hover {
 #workspaces button.active {
   font-weight: bold;
   opacity: 1;
-  border-bottom: 1px dotted;
+  /* border-bottom: 1px dotted; */
+  background-color: @primary;
+  color: @on_primary;
 }
 
 #workspaces button.urgent {
@@ -119,24 +125,58 @@ menu menuitem:hover {
 /* ---------- clock ---------- */
 
 #clock {
-  color: @blue;
   font-weight: bold;
 }
 
 /* ---------- pulseaudio ---------- */
 
 #pulseaudio {
-  color: @green;
+  color: @on_surface;
 }
 
 #pulseaudio.muted {
-  color: @overlay0;
+  color: @on_surface;
+}
+
+#pulseaudio.microphone {
+  margin: 0 5px;
+  padding: 0 2px;
+  background-color: transparent;
+  border-radius: 20px;
+}
+
+#pulseaudio-slider {
+  margin: 4px 5px;
+  padding: 0 2px;
+  background-color: transparent;
+  border-radius: 20px;
+}
+
+#pulseaudio-slider trough {
+  min-height: 10px;
+  min-width: 80px;
+  border-radius: 10px;
+  background-color: @outline_variant;
+}
+
+#pulseaudio-slider highlight {
+  min-height: 10px;
+  border-radius: 10px;
+  background-color: @primary;
+}
+
+#pulseaudio-slider slider {
+  min-height: 12px;
+  min-width: 12px;
+  margin: -2px 0;
+  border-radius: 100%;
+  background-color: @primary;
 }
 
 /* ---------- battery ---------- */
 
 #battery {
-  color: @green;
+  color: @on_surface;
 }
 
 #battery.charging {
@@ -154,25 +194,36 @@ menu menuitem:hover {
 /* ---------- network ---------- */
 
 #network {
-  color: @peach;
+  color: @on_surface;
 }
 
 #network.disconnected {
   color: @red;
 }
 
+#bluetooth {
+  color: @on_surface;
+  padding-right: 12px;
+}
+
 /* ---------- cpu / memory ---------- */
 
 #cpu {
-  color: @mauve;
+  color: @on_surface;
 }
 
 #memory {
-  color: @lavender;
+  color: @on_surface;
+  padding: 0 16px;
 }
 
 #disk {
-  padding-right: 10px;
+  color: @on_surface;
+  padding-right: 16px;
+}
+
+#temperature {
+  color: @on_surface;
 }
 
 /* ---------- tray ---------- */
