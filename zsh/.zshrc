@@ -1,4 +1,5 @@
 export PATH="/home/viper/.local/bin:$PATH"
+export EDITOR=nvim
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
@@ -14,6 +15,16 @@ compinit
 
 # Set Vi Mode
 bindkey -v
+
+# Ctrl+Right / Ctrl+Left → word movement in vi mode in Ghostty
+bindkey -M viins '^[[1;5C' forward-word
+bindkey -M viins '^[[1;5D' backward-word
+bindkey -M vicmd '^[[1;5C' forward-word
+bindkey -M vicmd '^[[1;5D' backward-word
+
+# Ctrl+Backspace to delete word backwards in Ghostty
+bindkey -M viins '\e\x7f' backward-kill-word
+bindkey -M vicmd '\e\x7f' backward-kill-word
 
 eval "$(starship init zsh)"
 

@@ -48,3 +48,6 @@ font-family = IoskeleyMonoTerm Nerd Font Mono
 font-size = 14
 
 background-opacity = 0.95
+
+# Ensure ctrl+backspace deletes the previous word
+keybind = ctrl+backspace=text:\x1b\x7f
