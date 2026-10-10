@@ -27,6 +27,7 @@ compinit
 # bindkey -M vicmd '\e\x7f' backward-kill-word
 
 eval "$(starship init zsh)"
+eval "$(ssh-agent -s)" > /dev/null
 
 alias ls="eza --icons=auto"
 alias tree="eza -T -L 1 --icons=auto"
