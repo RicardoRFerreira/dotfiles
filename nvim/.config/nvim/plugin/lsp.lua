@@ -172,6 +172,11 @@ local servers = {
         },
       },
     },
+    capabilities = {
+        general = {
+            positionEncodings = { "utf-16" }
+        }
+    },
   },
   tsc = {},
 }
